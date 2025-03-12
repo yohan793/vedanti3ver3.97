@@ -1,24 +1,26 @@
 let noClickCount = 0;
 
 function showFireworks() {
-    document.getElementById('fireworks').style.display = 'block';
+    let fireworks = document.getElementById('fireworks');
+    fireworks.style.display = 'block';
+
+    // Hide fireworks after 5 seconds
+    setTimeout(() => {
+        fireworks.style.display = 'none';
+    }, 5000);
 }
 
 function askAgain() {
     let noButton = document.querySelector('.no-btn');
     let messageBox = document.getElementById('message-box');
+    
+    // Directly show the GIF and message
+    messageBox.style.display = 'block';
 
-    if (noClickCount === 0) {
-        alert('Are you sure?');
-        noClickCount++;
-    } else if (noClickCount === 1) {
-        messageBox.style.display = 'block'; // Show heartfelt message
-        noClickCount++;
-    } else {
-        noButton.style.position = 'absolute';
-        noButton.style.left = Math.random() * window.innerWidth + 'px';
-        noButton.style.top = Math.random() * window.innerHeight + 'px';
-    }
+    // Make the "No" button float
+    noButton.style.position = 'absolute';
+    noButton.style.left = Math.random() * window.innerWidth + 'px';
+    noButton.style.top = Math.random() * window.innerHeight + 'px';
 }
 
 // Generate Floating Hearts
@@ -27,7 +29,7 @@ function createHeart() {
     heart.innerHTML = "❤️";
     heart.classList.add("heart");
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = Math.random() * 3 + 2 + "s"; // Random speed
+    heart.style.animationDuration = Math.random() * 3 + 2 + "s";
 
     document.body.appendChild(heart);
 
