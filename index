@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vedanti, will you go out with me?</title>
+    
+    <!-- Google Font Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
     <style>
         body {
             background-color: pink;
@@ -47,8 +51,9 @@
     <button class="btn no-btn" onclick="askAgain()">No</button>
     <div class="fireworks" id="fireworks"></div>
     
+    <!-- Background Music -->
     <audio autoplay loop>
-        <source src="your-billie-eilish-love-song.mp3" type="audio/mp3">
+        <source src="your-music-file.mp3" type="audio/mp3">
     </audio>
     
     <script>
