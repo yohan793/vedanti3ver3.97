@@ -13,14 +13,18 @@ function showFireworks() {
 function askAgain() {
     let noButton = document.querySelector('.no-btn');
     let messageBox = document.getElementById('message-box');
-    
-    // Directly show the GIF and message
-    messageBox.style.display = 'block';
 
-    // Make the "No" button float
-    noButton.style.position = 'absolute';
-    noButton.style.left = Math.random() * window.innerWidth + 'px';
-    noButton.style.top = Math.random() * window.innerHeight + 'px';
+    if (noClickCount === 0) {
+        alert('Are you sure?');
+        noClickCount++;
+    } else {
+        messageBox.style.display = 'block'; // Show heartfelt message & GIF
+
+        // Make the "No" button float away
+        noButton.style.position = 'absolute';
+        noButton.style.left = Math.random() * window.innerWidth + 'px';
+        noButton.style.top = Math.random() * window.innerHeight + 'px';
+    }
 }
 
 // Generate Floating Hearts
