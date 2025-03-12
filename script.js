@@ -2,7 +2,7 @@ function showGif() {
     let gifContainer = document.getElementById('yes-gif');
     gifContainer.style.display = 'block';
 
-    // Hide the GIF after 5 seconds
+    // Hide GIF after 5 seconds
     setTimeout(() => {
         gifContainer.style.display = 'none';
     }, 5000);
@@ -13,7 +13,7 @@ function askAgain() {
     let messageBox = document.getElementById('message-box');
 
     if (!noButton.dataset.clicked) {
-        alert('Are you sure?');
+        alert('Are you sure? If yes, press No again.');
         noButton.dataset.clicked = "true";
     } else {
         messageBox.style.display = 'block';
