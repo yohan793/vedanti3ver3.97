@@ -1,0 +1,44 @@
+body {
+    background-color: pink;
+    background-image: url('https://www.transparenttextures.com/patterns/hearts.png');
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+
+.animated-text {
+    font-size: 2em;
+    color: red;
+    animation: fadeInOut 2s infinite alternate;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.btn {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+
+.yes-btn {
+    background-color: lightgreen;
+}
+
+.no-btn {
+    background-color: lightcoral;
+}
+
+.fireworks {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif') center/cover;
+}
